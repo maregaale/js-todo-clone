@@ -1,5 +1,7 @@
 // creo un evento alla pressione sul tasto invio
 $("#list_element").keydown(function (e) {
+
+  // controllo la pressione del tasto invio
   if (e.which == 13) {
     // clono il template
     var listItemTemplate = $(".template .todo_list_item").clone();
@@ -15,15 +17,10 @@ $("#list_element").keydown(function (e) {
 
     // setto a vuoto il valore della casella di input
     $(this).val("");
-
-    console.log($(this).val());
-
   }
 });
 
-
-
-// creo un evento al click sul bottone che elimini l'elemento corrispondente
+// creo un evento on-click sul bottone che elimini l'elemento e la riga corrispondente
 $(".todo_list").on("click", $("#btn"), function () {
   $("#btn").parent().remove();
 });
