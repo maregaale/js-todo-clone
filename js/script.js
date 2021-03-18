@@ -9,14 +9,17 @@ $("#list_element").keydown(function (e) {
     // prendo il valore che arriva dall'input
     var inputValue = $(this).val();
 
-    // immetto il valore nel mio list-item in template
-    listItemTemplate.prepend(inputValue);
+    // controllo che l'utente non abbia inserito una stringa vuota
+    if (inputValue != "") {
+      // immetto il valore nel mio list-item in template
+      listItemTemplate.prepend(inputValue);
 
-    // innietto tutto il list-item nella lista visibile in html
-    $(".todo_list").append(listItemTemplate);
+      // innietto tutto il list-item nella lista visibile in html
+      $(".todo_list").append(listItemTemplate);
 
-    // setto a vuoto il valore della casella di input
-    $(this).val("");
+      // setto a vuoto il valore della casella di input
+      $(this).val("");
+    }
   }
 });
 
