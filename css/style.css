@@ -7,3 +7,20 @@
 .template {
   display: none;
 }
+
+.wrapper {
+  width: 80%;
+  margin: 30px auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+#list_element {
+  margin-left: 20px;
+}
+
+ul {
+  list-style: none;
+}
