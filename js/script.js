@@ -14,8 +14,14 @@ $("#list_element").keydown(function (e) {
       // immetto il valore nel mio list-item in template
       listItemTemplate.prepend(inputValue);
 
+      // faccio apparire la lista
+      $(".todo_list").slideDown(1000);
+
       // innietto tutto il list-item nella lista visibile in html
       $(".todo_list").append(listItemTemplate);
+
+      // faccio apparire i list items
+      listItemTemplate.slideDown(1000);
 
       // setto a vuoto il valore della casella di input
       $(this).val("");
@@ -24,6 +30,6 @@ $("#list_element").keydown(function (e) {
 });
 
 // creo un evento on-click sul bottone che elimini l'elemento e la riga corrispondente
-$(".todo_list").on("click", $("#btn"), function () {
-  $("#btn").parent().remove();
+$(".todo_list").on("click", "#btn", function () {
+  $(this).parent().slideUp('slow');
 });
