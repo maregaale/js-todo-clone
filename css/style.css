@@ -12,12 +12,13 @@ body {
   background: -o-linear-gradient(bottom left, rgba(214,209,209,0.5998774509803921) 0%, rgba(125,122,122,1) 100%);
   background: linear-gradient(to top right, rgba(214,209,209,0.5998774509803921) 0%, rgba(125,122,122,1) 100%);
 }
+
 .wrapper {
   position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 50px 0;
+    padding: 50px 30px;
     width: 400px;
     background-color: #99ccff;
     border-radius: 20px;
@@ -25,20 +26,22 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 h2, ul {
   margin-top: 50px;
 }
+
 ul {
   display: none;
-
+  margin-left: 16px;
 }
 
 ul li {
   margin: 10px 0;
   display: none;
+  width: 100%;
 }
 
 /* template */
@@ -49,6 +52,26 @@ ul li {
 /* bottone */
 #btn {
   margin-left: 50px;
+  padding: 10px;
+  background-color: #ff8566;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  animation-name: scale;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+#btn:focus {
+  outline: none;
+}
+
+@keyframes scale {
+  0% {transform: scale(1);}
+
+  50% {transform: scale(1.1);}
+
+  100% {transform: scale(1);}
 }
 
 /* input */
