@@ -25,3 +25,11 @@ label {
 h2, ul {
   margin-top: 50px;
 }
+
+#btn {
+  margin-left: 50px;
+}
+
+ul li {
+  margin: 10px 0;
+}
